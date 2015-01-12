@@ -142,7 +142,7 @@ def setupBulbs() {
 	removeChildDevices(delete)
     
     //we want to ensure syncronization between rooms and bulbs
-    syncronizeDevices()
+    //syncronizeDevices()
 }
 
 def initialize() {
@@ -443,8 +443,8 @@ def debugEvent(message, displayEvent) {
 }
 
 def debugOut(msg) {
-	log.debug msg
-	sendNotificationEvent(msg) //Uncomment this for troubleshooting only
+	//log.debug msg
+	//sendNotificationEvent(msg) //Uncomment this for troubleshooting only
 }
 
 
@@ -479,7 +479,7 @@ def on(childDevice) {
     }
     
     //we want to ensure syncronization between rooms and bulbs
-    runIn(2, "syncronizeDevices")
+    //runIn(2, "syncronizeDevices")
 }
 
 def off(childDevice) {
@@ -510,7 +510,7 @@ def off(childDevice) {
     }
     
     //we want to ensure syncronization between rooms and bulbs
-    runIn(2, "syncronizeDevices")      
+    //runIn(2, "syncronizeDevices")      
 }
 
 def setLevel(childDevice, value) {
@@ -541,7 +541,7 @@ def setLevel(childDevice, value) {
     }
     
     //we want to ensure syncronization between rooms and bulbs
-    runIn(2, "syncronizeDevices")   
+    //runIn(2, "syncronizeDevices")   
 }
 
 // Really not called from child, but called from poll() if it is a room
